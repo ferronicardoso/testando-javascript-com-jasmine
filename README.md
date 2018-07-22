@@ -1,1 +1,1 @@
-# Fonte do artigo Testando seu c¢digo JavaScript com Jasmine
+# Fonte do artigo Testando seu c√≥digo JavaScript com Jasmine
