@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Jasmine</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="text" name="valor1" id="valor1" placeholder="Valor 1" style="font-size: 20px" />
+    <select name="operacao" id="operacao" style="font-size: 20px">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" name="valor2" id="valor2" placeholder="Valor 2" style="font-size: 20px" />
+    <input type="button" id="btnCalcular" value="Calcular" style="font-size: 20px" />
+    <br />
+    <br />
+    <div id="resultado" style="font-weight: bold; font-size: 25px">
+    </div>
+    <script src="third-party/jquery.min.js"></script>
+    <script src="js/calculadora.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btnCalcular').click(function () {
+                var valor1 = $('#valor1').val();
+                var operacao = $('#operacao').val();
+                var valor2 = $('#valor2').val();
+                            
+                var v1 = valor1.length == 0 ? 0 : parseInt(valor1);
+                var v2 = valor2.length == 0 ? 0 : parseInt(valor2); 
+                
+                var resultado = Calcular(v1, operacao, v2);
+
+                $('#resultado').text(resultado);
+            });            
+        });
+    </script>
+</body>
+</html>
